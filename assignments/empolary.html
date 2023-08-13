@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+    <title>Array and Objects</title>
+</head>
+<body>
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get All Employes" onclick="allemployes()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get Male Employes" onclick="getMaleemployes()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get Female Employes" onclick="femalemployes()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get Managers" onclick="managers()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get Teamlead" onclick="Teamleaders()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get HR" onclick="HR()">
+
+            <br><br>
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get Active Employee" onclick="activeemployee()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get Active Employee" onclick="inactiveemployee()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get All Employes Salary" onclick=" allempoyessalary()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Get 10Laksh Employes Salary" onclick=" tenblowempoyessalary()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Laptop Assigned" onclick=" laptopassigned()">
+
+        <br><br>
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Laptop Not Assigned" onclick=" laptopnotassigned()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Below 30 Age employees" onclick="belowthirtyempoyess()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value="Above 30 Age employees" onclick="abovethirtyempoyess()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value=" employee delete" onclick="empdelete()">
+
+        <input type="button" class="btn btn-primary md-5" style="margin-top:25px ;" value=" employee Added" onclick="empadd()">
+        
+        
+
+
+
+
+
+        
+    <!-- <input type="button" value="Get male employes" onclick="getMaleemployes()" > -->
+
+    <!--
+        20 Tasks.
+           1) Get Totoal Emplyes. (Number)
+           2) Get all Managers. (String/Object)
+           3) Get all TLS. (String/Object)
+           4) Expereice based filter. (String/object)
+           5) Get All HR Emplyes.(String/object)
+           6) Get All female Employees. (String/object)
+           7) Get All Male Employees (String/object)
+           8) Get my Clients. (String/object)
+           9) How much salaries Spending per Month. (Number)
+           10) Annully profit-loss. (Number)
+           11) Office expences per month. (Number)
+           12) Add Bonous to 6th employe. (Number)
+           13) Employe Attdance data. (Number/object)
+           14) Who having High Salary - Low salary. (Number/object)
+           15) Delete Employee at 5th positon . (Boolean)
+           16) Add New Employee. (String//Object) -> Push()
+           17) Add Hike to employee. (Number)
+           18) Status of employee ('Active'/'inactive'). (Boolen)
+           19) Health incsuance. (String/Object/number)
+           20) Laptop Assigned. (boolean.)
+           21) Replace employee.
+           22) Get emplloyes who positon bwetwwn 10 to 15 -.slice(10,15)
+           23) Get employe in assedning order.
+           24) Add 2 new employe at 13th position of total employes.
+           25) Remove employe at 26th position.
+           26) 
+
+           {
+            color: red;
+           }
+    -->
+
+    <script>
+
+  const employees = [
+    {
+        emp_name: 'Manohar Lotlapalli',
+        emp_age : 31,
+        emp_address : 'Hydrabad',
+        gender : 'Male',
+        designation : 'Manegar',
+        salary : 20000000,
+        doj : '2019-march',
+        laptop_assign : 'true',
+        emp_helth_insu : 7500000,
+        Status_of_employee : 'Active'
+    },
+    {
+        emp_name: 'Madhu',
+        emp_age : 38,
+        emp_address : 'Kerala',
+        gender : 'Female',
+        designation : 'GM',
+        salary : 25000000,
+        doj : '2016-july',
+        laptop_assign : 'true',
+        emp_helth_insu : 8500000,
+        Status_of_employee : 'Active'
+    },
+    {
+        emp_name: 'Prasadu Elaprolu',
+        emp_age : 28,
+        emp_address : 'Vijayawada',
+        gender : 'Male',
+        designation : 'Software Engineer',
+        salary : 1300000,
+        doj : '2018-october',
+        laptop_assign : 'true',
+        emp_helth_insu : 350000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Manisha',
+        emp_age : 25,
+        emp_address : 'Vizagpattanam',
+        gender : 'Female',
+        designation : 'Web develope',
+        salary : 1000000,
+        doj : '2021-april',
+        laptop_assign : 'true',
+        emp_helth_insu : 250000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Kavith',
+        emp_age : 35,
+        emp_address : 'Warangal',
+        gender : 'Female',
+        designation : 'Asst manager',
+        salary : 18000000,
+        doj : '2017-june',
+        laptop_assign : 'true',
+        emp_helth_insu : 6500000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Ashok',
+        emp_age : 24,
+        emp_address : 'Chennai',
+        gender : 'Male',
+        designation : 'Project Engineer',
+        salary : 600000,
+        doj : '2022-january',
+        laptop_assign : 'false',
+        emp_helth_insu : 200000,
+        Status_of_employee : 'inactive'
+
+    },
+    {
+        emp_name: 'Siva',
+        emp_age : 30,
+        emp_address : 'Kadapa',
+        gender : 'Male',
+        designation : 'Senior Project Engineer',
+        salary : 1400000,
+        doj : '2017-may',
+        laptop_assign : 'false',
+        emp_helth_insu : 500000,
+        Status_of_employee : 'inactive'
+
+    },
+    {
+        emp_name: 'Sreenu',
+        emp_age : 32,
+        emp_address : 'Nellur',
+        gender : 'Male',
+        designation : 'Scrum Master',
+        salary : 1800000,
+        doj : '2015-may',
+        laptop_assign : 'false',
+        emp_helth_insu : 6500000,
+        Status_of_employee : 'inactive'
+
+    },
+    {
+        emp_name: 'Venkat',
+        emp_age : 29,
+        emp_address : 'Tirupathi',
+        gender : 'Male',
+        designation : 'Sr Software Engineer',
+        salary : 1400000,
+        doj : '2019-october',
+        laptop_assign : 'true',
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Hrithika',
+        emp_age : 25,
+        emp_address : 'Maharashtra',
+        gender : 'Female',
+        designation : 'System Engineer',
+        salary : 1000000,
+        doj : '2018-october',
+        laptop_assign : 'true',
+        emp_helth_insu : 450000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Anil',
+        emp_age : 23,
+        emp_address : 'Tirupathi',
+        gender : 'Male',
+        designation : 'Software Engineer',
+        salary : 400000,
+        doj : '2023-october',
+        laptop_assign : 'false',
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Laxmi',
+        emp_age : 30,
+        emp_address : 'Vijayawada',
+        gender : 'Male',
+        designation : 'Tech Lead',
+        salary : 1600000,
+        doj : '2017-september',
+        laptop_assign : 'true',
+        emp_helth_insu : 750000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Jyothi',
+        emp_age : 24,
+        emp_address : 'Bangalore',
+        gender : 'Female',
+        designation : 'HR',
+        salary : 900000,
+        doj : '2019-february',
+        laptop_assign : 'true',
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Vamsi',
+        emp_age : 24,
+        emp_address : 'Guntr',
+        gender : 'Male',
+        designation : 'Executive',
+        salary : 400000,
+        doj : '2022-december',
+        laptop_assign : 'false',
+        emp_helth_insu : 200000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Ramu',
+        emp_age : 33,
+        emp_address : 'Eluru',
+        gender : 'Male',
+        designation : 'PROGRAM MANAGER',
+        salary : 1900000,
+        doj : '2011-may',
+        laptop_assign : 'true',
+        emp_helth_insu : 800000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Thejaswini',
+        emp_age : 25,
+        emp_address : 'Guntr',
+        gender : 'Female',
+        designation : 'Senior Consultant',
+        salary : 1500000,
+        doj : '2020-june',
+        laptop_assign : 'true',
+        emp_helth_insu : 600000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Umesha',
+        emp_age : 27,
+        emp_address : 'Delhi',
+        gender : 'Male',
+        designation : 'Technologist',
+        salary : 1400000,
+        doj : '2021-december',
+        laptop_assign : 'true',
+        emp_helth_insu : 500000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'shini',
+        emp_age : 25,
+        emp_address : 'Guntr',
+        gender : 'Female',
+        designation : 'Senior Administrator',
+        salary : 700000,
+        doj : '2017-may',
+        laptop_assign : 'true',
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Vivitha',
+        emp_age : 27,
+        emp_address : 'chennai',
+        gender : 'Female',
+        designation : 'Senior quality',
+        salary : 1200000,
+        doj : '2017-july',
+        laptop_assign : 'true',
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Kumar',
+        emp_age : 25,
+        emp_address : 'Hyd',
+        gender : 'Male',
+        designation : 'Delivery Manager',
+        salary : 2300000,
+        doj : '2016-june',
+        laptop_assign : 'true',
+        emp_helth_insu : 900000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Deepu',
+        emp_age : 25,
+        emp_address : 'pune',
+        gender : 'Female',
+        designation : 'Administrator',
+        salary : 700000,
+        doj : '2019-october',
+        laptop_assign : 'true',
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Mohan',
+        emp_age : 25,
+        emp_address : 'Bangalore',
+        gender : 'Male',
+        designation : 'Senior engineer',
+        salary : 700000,
+        doj : '2017-may',
+        laptop_assign : 'true',
+        emp_helth_insu : 300000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Rmesh',
+        emp_age : 25,
+        emp_address : 'Guntr',
+        gender : 'Male',
+        designation : 'Senior Project Engineer',
+        salary : 1100000,
+        doj : '2019-september',
+        laptop_assign : 'true',
+        emp_helth_insu : 400000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Uday',
+        emp_age : 24,
+        emp_address : 'Vijayawada',
+        gender : 'Male',
+        designation : 'Executive',
+        salary : 420000,
+        doj : '2022-January',
+        laptop_assign : 'false',
+        emp_helth_insu : 220000,
+        Status_of_employee : 'Active'
+
+    },
+    {
+        emp_name: 'Sunitha',
+        emp_age : 28,
+        emp_address : 'Pune',
+        gender : 'Female',
+        designation : 'Administrator',
+        salary : 1200000,
+        doj : '2020-augset',
+        laptop_assign : 'true',
+        emp_helth_insu : 500000,
+        Status_of_employee : 'Active'
+
+    }
+    
+  ];
+
+
+  //All Employess
+
+    function allemployes(){
+
+        console.log(employees);
+    }
+
+
+// Male Employess
+
+  function getMaleemployes() {
+    //console.log(employees);
+    const maleEmployes = [];
+    for(let i=0; i<employees.length; i++) {
+     if(employees[i].gender == 'Male') {
+        maleEmployes.push(employees[i]);
+     }
+    }
+    console.log(maleEmployes);
+  }
+
+
+  // Fmale Employess
+
+
+  function femalemployes(){
+
+const femaleEmployes=[];
+for(i=0; i<employees.length; i++){
+
+    if (employees[i].gender =='Female'){
+
+        femaleEmployes.push(employees[i]);
+    }
+}
+
+console.log( femaleEmployes);
+  }
+
+
+
+// Managers
+
+  function managers(){
+
+    const managers=[];
+    for(i=0; i<employees.length; i++){
+
+        if(employees[i]. designation == 'Manegar' ){
+
+            managers.push(employees[i]);
+        }
+
+    }
+
+    console.log (managers);
+  }
+
+
+  // designation : 'Tech Lead',
+
+
+  function Teamleaders(){
+
+    const teamleaders=[];
+    for (i=0; i<employees.length; i++){
+
+        if(employees[i].designation =='Tech Lead' ){
+            teamleaders.push(employees[i]);
+        }
+    }
+
+    console.log(teamleaders);
+  }
+
+  //HR
+  
+function HR(){
+
+    const hr =[];
+
+    for (i=0; i<employees.length; i++){
+
+        if(employees[i].designation == 'HR'){
+
+            hr.push(employees[i]);
+        }
+
+    }
+    console.log(hr)
+    
+}
+
+//active employees
+function activeemployee(){
+
+    const activeemployee =[];
+
+    for (i=0; i<employees.length; i++){
+
+if(employees[i]. Status_of_employee =='Active'){
+
+    activeemployee.push(employees[i]);
+}
+
+}
+console.log(activeemployee)
+
+}
+
+// inactiveemployees
+
+function inactiveemployee(){
+
+const inactiveemployee =[];
+
+for (i=0; i<employees.length; i++){
+
+if(employees[i]. Status_of_employee =='inactive'){
+
+inactiveemployee.push(employees[i]);
+}
+
+}
+console.log(inactiveemployee)
+
+}
+
+//all employess salary
+
+function allempoyessalary(){
+
+    const allemployeesalary =[];
+
+for (i=0; i<employees.length; i++){
+
+if(employees[i]. salary <=9000000){
+
+    allemployeesalary.push(employees[i]);
+}
+
+}
+console.log(allemployeesalary)
+
+
+}
+
+//10lak blow salary employess
+
+function tenblowempoyessalary(){
+
+const tenbelow_allemployeesalary =[];
+
+for (i=0; i<employees.length; i++){
+
+if(employees[i]. salary <=1000000){
+
+tenbelow_allemployeesalary.push({'empname' : employees[i].emp_name, 'salary' : employees[i].salary});
+}
+
+}
+console.log(tenbelow_allemployeesalary)
+
+
+}
+
+
+//laptopassigned
+
+function laptopassigned(){
+
+const laptopassigned =[];
+
+for (i=0; i<employees.length; i++){
+
+if(employees[i]. laptop_assign == 'true'){
+
+    laptopassigned.push(employees[i]);
+}
+
+}
+console.log(laptopassigned)
+
+
+}
+
+// loptopnotaasingned
+function laptopnotassigned(){
+
+const laptopnotassigned =[];
+
+for (i=0; i<employees.length; i++){
+
+if(employees[i]. laptop_assign == 'false'){
+
+    laptopnotassigned.push(employees[i]);
+}
+
+}
+console.log(laptopnotassigned)
+
+
+}
+
+// age below 30
+
+function belowthirtyempoyess(){
+
+const belowthirty_empoyess =[];
+
+for (i=0; i<employees.length; i++){
+
+if(employees[i].  emp_age<=30){
+
+    belowthirty_empoyess.push({'empname' : employees[i].emp_name, 'salary' : employees[i].emp_age});
+}
+
+}
+console.log(belowthirty_empoyess);
+
+
+}
+
+
+//above 30
+
+function abovethirtyempoyess(){
+
+const abovethirty_empoyess =[];
+
+for (i=0; i<employees.length; i++){
+
+if(employees[i].  emp_age>=30){
+
+    abovethirty_empoyess.push({'empname' : employees[i].emp_name, 'salary' : employees[i].emp_age});
+}
+
+}
+console.log(abovethirty_empoyess);
+
+
+}
+
+
+//5th emp delete
+
+function empdelete(){
+
+    employees.splice(5,1)
+    console.log(employees)
+}
+
+//employee add
+function empadd(){
+
+    let emp = {
+
+        emp_name: 'Sai Ram',
+        emp_age : 25,
+        emp_address : 'Hydrabad',
+        gender : 'Male',
+        designation : 'UI Devloper',
+        salary : 9000000,
+        doj : '2015-march',
+        laptop_assign : 'true',
+        emp_helth_insu : 7500000,
+        Status_of_employee : 'Active'
+    
+    }
+
+employees.push(emp)
+console.log(employees)
+}
+
+
+
+    </script>
+    
+</body>
+</html>

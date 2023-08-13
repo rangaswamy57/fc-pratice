@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>this and call and bind</title>
+</head>
+<body>
+        <script>
+
+                const train ={
+
+                        train_name  : 'vandhe Bharath Express',
+                        train_speedlimit :   250,
+                        train_ac_coaches : 20,
+                        train_color    : 'Blue and White',
+
+                        trainfulldetail : function(){
+                               console.log ('Rangaswamy');
+                                console.log ( this.train_name);
+                               console.log ( this.train_speedlimit);
+                                console.log ( this.train_ac_coaches);
+                                console.log ( this.train_color);
+
+                                console.log('Train Name is ' + this.train_name + 'As Speed is ' + this.train_speedlimit + '.Train Color is ' + this.train_color);
+                                
+                        }
+                }
+
+                train.trainfulldetail();
+
+
+                const mobile ={
+
+                        mobile          : 'iPhone 14',
+                        mobile_price    :  50000,
+                        mobiel_color    : 'Red'
+                };
+
+
+                const mobile1 ={
+
+                        mobile          : 'POCO',
+                        mobile_price    :  20000,
+                        mobiel_color    : 'Blue'
+                };
+
+                const mobile2 ={
+
+                        mobile          : 'Samsung',
+                        mobile_price    :  40000,
+                        mobiel_color    : 'LightBlue'
+                };
+
+                 const mobile3 ={
+
+                        mobile          : 'Oneplus',
+                        mobile_price    :  50000,
+                        mobiel_color    : 'Black'
+                };
+
+                const phonedtails= {
+
+                        phonefulldetail : function(){
+                                console.log(this.mobile);
+                                console.log(this.mobile_price);
+                        }
+                }
+
+                phonedtails.phonefulldetail.call(mobile2);
+
+                phonedtails.phonefulldetail.call(mobile3);
+
+
+
+        </script>
+</body>
+</html>

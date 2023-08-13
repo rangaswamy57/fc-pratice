@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Practice</title>
+
+        <style>
+                body {
+                        background-color: #181d31;
+                }
+
+                .continergrid {
+
+                        border: 1px solid white;
+                        width: 250px;
+                        margin: 100px;
+                        padding: 10px;
+                        display: grid;
+                        grid-template-columns: 20% 20% 20% 20%;
+                        column-gap: 10px;
+                        row-gap: 10px;
+                }
+
+                .item {
+
+                        background-color: aliceblue;
+                        padding: 10px;
+                        border: 1px solid rgb(251, 197, 249);
+                }
+
+              @media (max-width:500px){
+
+                .continergrid{
+
+                        grid-template-columns: 10px;
+                }
+
+                .item{
+                        background-color: aquamarine;
+                }
+              }
+                        
+                
+        </style>
+
+</head>
+
+<body>
+        <div class="continergrid">
+
+                <div class="item"> 7</div>
+                <div class="item"> 8</div>
+                <div class="item">9</div>
+                <div class="item">+</div>
+                <div class="item"> 4</div>
+                <div class="item">5</div>
+                <div class="item"> 6</div>
+                <div class="item">-</div>
+                <div class="item"> 1</div>
+                <div class="item"> 2</div>
+                <div class="item"> 3</div>
+                <div class="item">*</div>
+                <div class="item"> 0</div>
+                <div class="item">.</div>
+                <div class="item">=</div>
+                <div class="item">/</div>
+
+
+
+
+
+        </div>
+
+
+</body>
+
+</html>

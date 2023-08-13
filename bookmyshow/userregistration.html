@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+<link rel="stylesheet" href="bookmyshow.css">
+</head>
+
+<body>
+
+        <!-- Header Seaction -->
+        <div>
+            <h1 style="text-align: center; color: rgb(248, 68, 100)">Book My Show</h1>
+            <p>Book your Tickets Here</p>
+            <img src="images/bookmyshow-logo.png" alt="bookmyshow" style="margin-left: 590px" height="320px"
+                width="320px" />
+    
+            <!-- Menue Seaction -->
+            <ul>
+                <li> <a class="menue" href="index.html">Home</a></li>
+                <li><a class="menue" href="events.html">Events</a></li>
+                <li><a class="menue" href="sports.html">Sports</a></li>
+                <li><a class="menue" href="contact.html">Contact Us</a></li>
+                <li><a class="menue" href="latestvideos.html">Latest Videos</a></li>
+                <li><a class="menue" href="loginform.html">Login</a></li>
+                <li><a class="menue" href="userregistration.html">Registration</a></li>
+            </ul>
+
+    <h1 class="hone">User Registration Form</h1>
+    <form action="loginform.html" method="post">
+
+        <p><label for="firstname">First Name: </label>
+            <input type="text" name="firstname" value="" id="firstname" required placeholder=" First Name">
+        </p>
+
+
+        <p><label for="lastname">Last Name: </label>
+            <input type="text" name="lastname" value="" id="lastname" required>
+        </p>
+
+        <p>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" value="" id="male">Male
+            <input type="radio" name="gender" value="" id="female">Female
+        </p>
+
+        <p>
+            <label for="date of birth">Date Of Birth: </label>
+            <input type="date" name="dateofbirth" value="" id="dateofbirth" required>
+
+        </p>
+
+        <p>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" value="" id="email" required>
+        </p>
+
+        <p>
+            <label for="username"> User Name: </label>
+            <input type="text" name="username" value="" id="username" required>
+        </p>
+
+        <p>
+            <label for="password">Password: </label>
+            <input type="password" name="password" value="" id="password" required>
+        </p>
+
+        <p>
+            <label for="retypepassword">Retype Password: </label>
+            <input type="password" name="retypepassword" value="" id="retypepassword" required>
+
+        </p>
+
+        <p>
+            <label for="phonenumber">Mobile Number: </label>
+            <input type="tel" name="phonenumber" value="" id="phonenumber" required>
+        </p>
+
+        <p>
+            <label for="Address">Address: </label>
+            <textarea name="address" id="address" cols="30" rows="5"></textarea>
+
+        </p>
+        <p>
+            <label for="town">Town: </label>
+            <input type="text" name="town" value="" id="town">
+        </p>
+
+        <p>
+            <label for="pincode">PIN Code</label>
+            <input type="number" name="pincode" value="" id="pincode">
+
+        </p>
+
+        <p>
+            <label for="existing customer">Are You An Existing Customer?: </label>
+            <input type="radio" name="existing customer" value="" id="existing customer">Yes
+            <input type="radio" name="existing customer" value="" id="existing customer">No
+
+        </p>
+        <p>
+            <label for="City Name">Choose City Name: </label>
+            <select name="City Name" id="City Name">
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Pune">Pune</option>
+                <option value="Delhi">Delhi</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" name="Registration" class="Registration">
+        </p>
+
+    </form>
+
+</body>
+
+</html>

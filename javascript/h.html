@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book my show price details in realtime projects refrence</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+    <div class="container mt-5">
+        <h4 class="text-center py-4">Booking prices dynamic by using Javascript</h4>
+        <div class="row">
+            <div class="col  p-5" style="background-color: cadetblue;">
+
+        
+                <!-- <label for="" id="base_price" class="form-label">Base Price</label> -->
+                <input type="text" class="form-control" id="base-price" placeholder="ticket-Price" name="text"
+                    value=""><br>
+
+                <select name="" id="tickets_count" class="form-select" onchange="price_calculation(event);">
+                    <option value="">select tickets....</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select> <br>
+
+                <select name="" id="food" class="form-select" onchange="food_calculate(event);">
+                    <option value="">select food....</option>
+                    <option value="50">popcorn</option>
+                    <option value="100">Burger</option>
+                    <option value="150">Pizza</option>
+                    <option value="200">cool drinks</option>
+                </select><br>
+
+                <input type="checkbox" class="form-check-input" id="donation_amount" value="4" name="checkbox"
+                    onchange="donate_amount()"> donation
+
+            </div>
+
+
+            <div class="col p-5 " style="background-color: aqua;">
+                <p class="fw-bold">BOOKING SUMMARY</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Base price = <span id="base-pri">0</span></li>
+                    <li class="list-group-item">Sub total = <span id="sub_total">0</span></li>
+                    <li class="list-group-item">Food price = <span id="food_pri">0</span></li>
+                    <li class="list-group-item">Dontate = <span id="donate">0</span></li>
+                    <li class="list-group-item">Grand_Total = <span id="grand-total">0</span></li>
+                </ul><br>
+
+                <button type="button" class="btn btn-success">BookNow</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+        //////////////// BASE-PRICE AND TOTAL TICKETS 
+
+        function price_calculation(event) {
+
+            var base_price = document.getElementById('base-price').value
+
+            var tickets_count = event.target.value
+
+            var sub_total = base_price * tickets_count
+
+            document.getElementById('base-pri').innerHTML = base_price
+
+            document.getElementById('sub_total').innerHTML = sub_total
+
+            overall_calculation()
+
+
+        };
+
+
+        /////////////// FOOD- CALCULATION
+
+        function food_calculate(event) {
+
+
+            /* var base_price = document.getElementById('base-price').value
+
+            var tickets_count = event.target.value
+
+            var sub_total = base_price + tickets_count
+ */
+            var food_price = event.target.value
+
+            document.getElementById('food_pri').innerHTML = food_price
+
+
+
+        };
+
+
+
+        //////////// DONATE-AMOUNT
+
+        function donate_amount() {
+
+            var donation_price = document.getElementById('donation_amount').value
+
+            document.getElementById('donate').innerHTML = donation_price
+
+
+        };
+
+
+
+        /////////// GRAND-TOTAL
+
+        function overall_calculation() {
+
+
+            var base_price = document.getElementById('base-price').value
+
+            var tickets_count = event.target.value
+
+            var sub_total = base_price * tickets_count
+
+
+            document.getElementById('grand-total').innerHTML = sub_total
+
+
+
+
+        };
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

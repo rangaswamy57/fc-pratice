@@ -1,0 +1,46 @@
+.divone{
+
+        border: 1px solid red;
+        height: 100px;
+        width: 30%;
+        background-color: gold;
+        position: relative;
+        float: left;
+}
+
+.divtwo{
+
+        border: 1px solid green;
+        height: 100px;
+        width: 69%;
+        background-color: rgb(60, 136, 141);
+        float: right;
+}
+
+.divtwo1{
+
+        border: 1px solid rgb(165, 44, 107);
+        height: 70px;
+        width: 60%;
+        background-color: rgb(79, 60, 141); 
+        float: left;
+        
+}
+
+.divtwo2{
+        border: 1px solid rgb(42, 118, 122);
+        height: 70px;
+        width: 30%;
+        background-color: rgb(147, 90, 30); 
+        float: right;
+        margin-left: 100px;
+
+}
+
+.divethree{
+        border: 1px solid green;
+        height: 50px;
+        width: 70%;
+        background-color: lightyellow;
+        overflow: scroll;
+}

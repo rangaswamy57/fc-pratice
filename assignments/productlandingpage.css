@@ -1,0 +1,84 @@
+.menue{
+    background-color: #e3735b;
+    padding-bottom: 1px;
+    
+}
+
+ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.menuelist{
+
+    text-decoration: none; 
+    color: aliceblue;
+    font-size: 20px;
+    float: left;
+    padding-left: 50px;
+   padding: 10px;
+}
+
+.menuelist1{
+
+    text-decoration: none; 
+    color: aliceblue;
+    font-size: 20px;
+    float: left;
+    padding: 10px;
+}
+
+.divone{
+    text-align: center;
+    height: 150px;
+    background-color: #8a8787;
+    padding: 100px;
+}
+
+
+.learnmore{
+
+    text-decoration: none;
+    color: aliceblue;
+    border: 1px;
+    background-color: #e3735b;
+    padding: 10px;
+    font-size: 25px;
+    
+}
+
+a:hover{
+
+    background-color: #666262;
+}
+
+.divetwo{
+
+    border: 1px;
+    background-color: rgb(70, 70, 87);
+    padding: auto;
+    height: 650px;
+}
+
+.divimage{
+    padding-left: 150px;
+    padding-top: 90px;
+    color: aliceblue;
+    margin-right: 730px;
+    margin-left: 150px; 
+}
+
+.divimage1{
+
+    position: absolute;
+  
+    padding-left: 150px;
+    padding-top: 90px;
+    color: aliceblue;
+    margin-right: 730px;
+    margin-left: 150px; 
+    margin-top: 10px;
+}
+
+
+

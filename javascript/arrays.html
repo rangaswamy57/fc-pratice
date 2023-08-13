@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+
+                <input type="text" id="new_bank"><button class="btn btn-primary" onclick="addnewbank()">Add New Bank</button>
+                <h1 id="name"></h1>
+
+        <script>
+                        //variables
+
+
+function addnewbank(){
+                var bank_name=["Andhrabank","SBI", "Axis Bank", "UnionBank", "Yes Bank", "ICICI Bank","induslnd Bank", "HDFC Bank"];
+                
+                var input_bank= document.getElementById('new_bank').value;
+
+                bank_name.push(input_bank);
+
+                for (i=0; i< bank_name.length; i++){
+
+                        console.log(bank_name[i]);
+                }
+
+        }
+
+        //objects
+
+        const saidetails={name:'sai', age:25, Number:9652}
+        const rangadetails={name:'ranga', age:27, Number:85678}
+        const swamydetails={ name:'swamy', age:29, Number:57485}
+
+       // console.log(rangadetails.Number);
+       // console.log(swamydetails.name);
+
+
+        //var with object
+
+        var user_details= [
+
+        {name:'sai', age:25, Number:9652},
+       {name:'ranga', age:27, Number:85678},
+        { name:'swamy', age:29, Number:57485}
+
+        ];
+
+        var username = user_details[0].name;
+        var username = user_details[2].age;
+        var username = user_details[1].Number;
+
+        document.getElementById('name').innerHTML=username
+
+
+
+
+        </script>
+</body>
+</html>

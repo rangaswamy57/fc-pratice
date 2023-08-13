@@ -1,0 +1,37 @@
+
+body{
+
+        background-color: #181d31;
+        font-family: Arial, sans-serif;
+}
+
+h1{
+
+        text-align: center;
+        color: #fb6542;
+}
+
+#todoform{
+ 
+        border: 2px solid #ccc;
+        padding: 30px;
+        margin-left: 520px;
+        margin-right: 560px;
+}
+
+.box{
+
+        padding: 8px;
+        width: 260px;
+        margin-bottom: 10px;
+}
+
+.button{
+
+        background-color: #fb6542;
+        padding: 9px;
+        width: 70px;
+        color: white;
+        border: none;
+        border-radius: 3px;
+}

@@ -1,0 +1,146 @@
+body {
+
+    background-color: #181d31;
+}
+
+.logotitle {
+
+    float: left;
+    width: 70%;
+}
+
+.menu {
+
+    float: right;
+    width: 30%;
+    word-spacing: 10px;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+h2 {
+
+    color: white;
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+}
+
+li {
+
+    display: inline;
+
+}
+
+.header {
+
+    background-color: #fb6542;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+}
+
+.rightside {
+    float: left;
+    /* border: 2px solid red; */
+    height: 100px;
+    width: 65%;
+}
+
+.leftside {
+    float: right;
+    /* border: 2px solid rgb(0, 30, 255); */
+    height: 100px;
+    width: 34%;
+
+}
+
+section {
+
+    margin-top: 70px;
+}
+
+.articlesection {
+    border: 1px solid white;
+    margin-left: 150px;
+    background-color: white;
+    height: 570px;
+    width: 800px;
+    margin-top: 25px;
+}
+
+img {
+
+    width: 800px;
+    height: 350px;
+}
+
+.articletext {
+
+    padding-left: 20px;
+    font-family: "Proxima Nova Condensed", "Proxima Nova Condensed Fallback", sans-serif;
+}
+
+.readmore {
+
+    background-color: #fb6542;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+.readmore:hover {
+
+    background-color: gray;
+}
+
+
+/* leftside section */
+
+
+
+.categories {
+
+    border: 1px solid white;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 330px;
+    height: 280px;
+    margin-top: 25px;
+}
+
+.categorytitle {
+
+    color: rgb(32, 20, 20);
+    font-size: 30px;
+    padding-left: 10px;
+
+}
+
+
+.catul {
+    color: rgb(15, 10, 10);
+    position: relative;
+    display: block;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, .125);
+    padding: 10px;
+
+}
+
+.cgtul {
+
+    padding-left: 10px;
+
+}

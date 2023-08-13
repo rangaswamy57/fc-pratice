@@ -1,0 +1,38 @@
+body {
+
+        background-color: #181d31;
+        margin: 0%;
+        padding: 0%;
+    }
+.brand-orange{
+        background-color: #fb6542;
+}    
+
+.navbar-brand{
+        color: white;
+}
+
+a{
+        color: white;
+}
+
+.container{
+
+        margin-top: 80px;
+        
+}
+
+h1,h2,h3,h5{
+        
+        color:white;
+}
+
+.btn{
+        background-color: #fb6542;
+        color: white;
+}
+
+.btn:hover{
+        background-color: #181d31;
+        color: white;
+}

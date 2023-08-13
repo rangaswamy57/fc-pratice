@@ -1,0 +1,88 @@
+
+/* Header Section */
+
+ul {
+        background-color: black;
+        overflow: hidden;
+        list-style-type: none;
+    }
+
+    .menue {
+        color: white;
+        text-decoration: none;
+    }
+
+    li {
+        float: left;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .Recommended {
+        float: left;
+        margin-left: 25px;
+    }
+
+    /* Footer Section */
+    .f {
+        background-color: rgb(80, 85, 84);
+    }
+
+    /* User resgistration H1 tag */
+    .hone{
+        text-align: center;
+        background-color: rgb(241, 214, 181);
+
+    }
+
+    /* User registration submit button section */
+    .Registration{
+        border: 1px solid orange;
+        background-color: orange;
+        border-radius: 9px;
+        padding: 10px;
+       
+    }
+
+    /* Login submit button section */
+    .login{
+        border: 1px solid orange;
+        background-color: orange;
+        border-radius: 9px;
+        padding: 10px;
+       
+    }
+
+    /* Hyderabad imag section */
+
+    .HyderabadSports {
+
+        float: left;
+        margin-left: 25px;
+    }
+
+    /* Hyderabad Event imag section */
+    
+    .Hyderabadevents {
+        float: left;
+        margin-left: 25px;
+    }
+
+/* Hyederabad Event Table Section */
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom-style: inset;
+    }
+
+    th {
+        background-color: #dce9e1;
+    }

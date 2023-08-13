@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration And Login Form</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+                crossorigin="anonymous">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                crossorigin="anonymous"></script>
+
+
+
+
+
+</head>
+
+<body>
+        <div class="container">
+
+                <div class="row">
+
+                        <div class="col-md-6 bg-info" style="margin:35px ;">
+
+                              
+
+                                <h2 class="text-center fw-bold"> REGISTRATION-FORM</h2>
+
+                                <br>
+
+                                <span id="reg-succesfull"></span><br>
+
+                                <form action="save.php" method="get" id="reg_form">
+
+                                        <label for="usernames"> User Name</label>
+                                        <input type="text" id="username" name="number1" value=""
+                                                placeholder="Enter Your Name" class="form-control">
+                                        <span id="nouser"></span><br>
+
+                                        <label for="pass"> Password</label>
+                                        <input type="password" id="password" name="number2" value=""
+                                                placeholder="Enter Your Password" class="form-control ">
+
+                                        <span id="no password"></span><br>
+
+                                        <label for="confpass"> Conform Password</label>
+                                        <input type="password" id="conform password" name="number3" value=""
+                                                placeholder="Re-enter Your password" class="form-control ">
+
+                                        <span id='cofmpassword'></span><br>
+
+                                        <label for="email">Email ID</label>
+                                        <input type="email" id="email" name="number4" value=""
+                                                placeholder="Enter Your Email Id" class="form-control">
+
+                                        <span id="nomailid"></span><br>
+
+                                        <label for="confemail"> Conform Email ID</label>
+                                        <input type="email" id="conform email" name="number4" value=""
+                                                placeholder="Re-Enter Your Email Id" class="form-control">
+
+                                        <span id="conmmailid"></span><br>
+
+                                        <button type="button" class="btn btn-outline-danger"
+                                                onclick="registration()">Register</button>
+                                </form>
+
+                        </div>
+
+                </div>
+
+          
+
+                        <div class="col-md-6 bg-info" style="margin:35px ;">
+
+                            
+                                <h2 class="text-center text-bg-danger ">LOGIN-FORM</h2><br>
+
+                                <span id="login-sucess"></span>
+
+                                        <form action="save.php" method="get">
+
+                                      
+                                        <input type="text" id="login_username" name="number1" value=""
+                                                placeholder="Enter User Name" class="form-control"
+                                                style="margin-top:35px ;">
+                                                
+
+                                                <span id="emtyloginusername"></span>
+                                                
+                                                <br>
+
+                                        <input type="password" id="login_password" name="number2" value=""
+                                                placeholder="Enter Password" class="form-control ">
+                                                
+                                                <span id="emtyloginpassword"></span>
+                                                <br>
+
+                                        <button type="button" class="btn btn-outline-success"
+                                                onclick="login_form()">Login</button>
+
+                                </form>
+
+
+                        </div>
+
+
+              
+
+
+
+                <script>
+
+                        const all_registarion_users = [];
+
+                        function registration() {
+
+                                let user_name = document.getElementById('username').value;
+                                let password = document.getElementById('password').value;
+                                let conform_password = document.getElementById('conform password').value;
+                                let email = document.getElementById('email').value;
+                                let conform_email = document.getElementById('conform email').value;
+
+                                //alert(password);
+
+                                // check User Name
+
+                                if (user_name == '') {
+
+                                        document.getElementById('nouser').innerHTML = 'Please Enter User Name';
+
+                                        return false;
+                                }
+
+                                if (user_name.length < 6) {
+
+                                        document.getElementById('nouser').innerHTML = 'User Name Should Be Six Letters';
+
+                                }
+
+                                // Check Password
+                                if (password == '') {
+
+                                        document.getElementById('no password').innerHTML = 'Please Enter Your Password';
+
+                                }
+
+                                // check password match
+                                if (password != conform_password) {
+
+                                        document.getElementById('cofmpassword').innerHTML = 'Your Password Not Matched';
+                                }
+
+
+                                // check mail id
+
+                                if (email == '') {
+
+                                        document.getElementById('nomailid').innerHTML = 'Please Enter Your Email Id';
+                                }
+
+                                // check password match
+                                if (email != conform_email) {
+
+                                        document.getElementById('conmmailid').innerHTML = 'Your Emil Id Not Matched';
+                                }
+
+
+                                const user_details =
+                                {
+                                        'username': user_name,
+                                        'email': email,
+                                        'conform email': conform_email,
+                                        'password': password,
+                                        'conform password': conform_password,
+
+                                };
+
+
+                                if (user_name != '' && email != '' && password != '') {
+
+                                        all_registarion_users.push(user_details);
+                                        console.log(all_registarion_users);
+                                        document.getElementById('reg_form').reset();
+                                        document.getElementById('reg-succesfull').innerHTML = 'Registration is Successfull';
+
+                                };
+                        }
+
+                        function login_form() {
+
+                                let login_username = document.getElementById('login_username').value;
+                                let login_password = document.getElementById('login-password'), value;
+
+
+                                if (login_username == '') {
+
+                                        document.getElementById('emtyloginusername').innerHTML = 'Please Enter User Name';
+                                }
+
+                                if (login_password == '') {
+
+                                document.getElementById('emtyloginpassword').innerHTML = 'Please Enter Password';
+                                }
+                                
+                                for (let i = 0; i < all_registarion_users.length; i++) {
+
+                                if (all_registarion_users[i].user_name == login_username && all_registarion_users[i].password == login_password) {
+                                        
+                                document.getElementById('login-sucess').innerHTML = "Successfull Login";
+
+                                        } else{
+
+                                                document.getElementById('login-sucess').innerHTML="User Name And Password Not Match";
+                                        }
+
+
+                                }
+
+                        }
+
+
+
+                </script>
+
+
+
+
+
+</body>
+
+</html>
